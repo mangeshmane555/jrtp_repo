@@ -1,0 +1,42 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>in.mane</groupId>
+	<artifactId>01-Spring-App</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<repositories>
+<!--		Remote repository url provided by devOps team-->
+		<repository>
+			<id>nexus</id>
+			<url>http://13.232.180.3:8081/repository/ashokit-remote-repository</url>
+		</repository>
+	</repositories>
+	<dependencies>
+		<!--
+		https://mvnrepository.com/artifact/org.springframework/spring-context -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>6.2.11</version>
+		</dependency>
+		
+<!--Put this in apache conifg file settings.xml and make <blocked>false</bolocked>		-->
+<!--		<server>-->
+<!--			<id>nexus</id>-->
+<!--			<username>admin</username>-->
+<!--			<password>admin</password>-->
+<!--		</server>-->
+		
+		
+<!--		Remote repository url-->
+<!--		<dependency>-->
+<!--			<groupId>in.mane</groupId>-->
+<!--			<artifactId>pwd-utils</artifactId>-->
+<!--			<version>1.0</version>-->
+<!--		</dependency>-->
+
+	</dependencies>
+
+</project>
