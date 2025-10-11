@@ -1,0 +1,174 @@
+	To commit only the modified files (and not the newly created/untracked files) to your Git repository, you can do the following:
+
+git status
+
+
+You can add modified files individually using:
+git add <modified-file1> <modified-file2>
+
+Or you can use the shorthand to add only modified (tracked) files:
+git add -u (or ) git add --update
+
+Commit the changes:
+git commit -m "Commit message for modified files only"
+
+
+
+💡 Summary:
+If you want to commit only modified (not new) files:
+git add -u
+git commit -m "Modified files only"
+
+-----------------------
+To discard the changes in unstagged file
+git restore <file-name>
+
+To unstage the stagged file
+git restore --stagged <file-name>
+
+	
+To check working tree pointing to which branch
+$ git branch
+
+To switch to particular branch
+$ git checkout <branch_name>
+
+We can merge changes from one branch to another branch using pull request
+
+
+$ git clone <url>  ==> will clone default branch
+
+To clone project directly to the develop branch not from main branch while develop branch is created from main branch
+
+git clone -b develop http://github.com/maneit/my_project.git
+
+To save our task in temporary space to complete another high priority task
+$git stash
+// Complete high priority task
+
+To get back our pending work
+$git stash apply
+
+// Interview questions
+1) git clone vs git pull
+2) git push vs git pull
+3) git stash & git stash apply
+4) git fetch vs git pull
+	-> pull download the remote repo changes to the working directory 		directly
+	-> fetch will first check that is there any changes in the remote 		repo if yes and then download these to the local repository 		but not the working directory. to get these changes to the 		working directory then should pull again
+
+5) git merge vs git rebase
+
+	-> merge will preserve commit history but rebase will not
+
+To merge one branch changes to another branch
+$ git merge develop (you should be present on the main branch)
+
+Git merge :
+	ways    1) pull request
+		2) git merge
+		3) git rebase 
+
+------------------------------------------------------
+
+fatal: detected dubious ownership in repository at 'D:/My_Project_Work/temple_project'
+'D:/My_Project_Work/temple_project' is owned by:
+        (inconvertible) (S-1-5-21-2171225936-1719943459-4148662676-1001)
+but the current user is:
+        DESKTOP-6948TP4/Mangesh (S-1-5-21-3442121798-3682177877-4187866295-1002)
+To add an exception for this directory, call:
+
+        git config --global --add safe.directory D:/My_Project_Work/temple_project
+
+=>Create a new branch and stay on the current branch
+git branch <new-branch-name>
+
+=>Create a new branch and immediately switch to it: 
+$ git checkout -b <new-branch-name>
+
+
+=> (use "git rm --cached <file>..." to unstage)
+
+=> You need to pull the changes from the remote first, merge (or rebase) them with your local changes, and then push.
+
+$ git pull origin main --rebase
+$ git push -u origin main
+
+=====================================================================
+Logging 
+========================
+
+-> The process of storing application execution details to a file is called as logging
+-> With log messages we can understand execution flow of the application
+-> we can understand exceptions occurring in the project by seeing log messages
+
+Logging frameworks
+--------------------
+1) Log4J
+2) Log4J2
+3) LogBack
+4) LogStash
+
+Log Monitoring tools
+----------------------
+
+1) Putty
+2) WinSCP
+3) ELK
+4) Splunk (Licensed)
+
+
+Logging Architecture 
+----------------------
+
+1) Logger : This class providing method to generate log messages 
+2) Layout : It represents log messages structure (format of log message)
+3) Appender : It is used to write log message to destination
+4)  Destination : It can be console/file/database
+
+Note : We will use files to store our log messages
+
+To save log details in a file
+
+	-> logging.file.name = app.log
+
+Logging level hierarchy
+
+Trace >> debug >> info >> warn >> error >> fatal
+
+In spring boot by Default it will use level ass INFO
+In spring boot by Default it will use ConsoleAppender
+To generate log messages in log file we have set below property in 
+application.properties file
+
+ logging.file.name = app.log
+ 
+----------------------------------
+
+Rolling Appenders
+======================
+
+1) Size based Rolling -> Log files saved based on size
+2) Time based Rolling -> Log files saved based on time period
+
+To customize springboot application log configuration by creating 
+logback.xml file under src/main/resources folder
+
+
+
+To change the log level 
+	-> logging.level.root = DEBUG
+	hence from here all levels get printed
+
+-> When we set one log level, application will print log messages from that level to all higher level messages.
+
+
+
+
+
+
+
+
+
+
+
