@@ -17,3 +17,25 @@
 2025-10-11T14:48:20.018+05:30  INFO 14240 --- [12_SB_Logging_App] [RMI TCP Connection(34)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
 2025-10-11T14:48:20.063+05:30  INFO 14240 --- [12_SB_Logging_App] [RMI TCP Connection(34)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
 2025-10-11T14:48:20.130+05:30  INFO 14240 --- [12_SB_Logging_App] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-11T16:14:36.794+05:30  INFO 5608 --- [12_SB_Logging_App] [restartedMain] in.mane.Application                      : Starting Application using Java 23.0.1 with PID 5608 (C:\Users\Admin\jrtp-workspace\01_SB_Logging_App\target\classes started by Mangesh in C:\Users\Admin\jrtp-workspace\01_SB_Logging_App)
+2025-10-11T16:14:36.798+05:30  INFO 5608 --- [12_SB_Logging_App] [restartedMain] in.mane.Application                      : No active profile set, falling back to 1 default profile: "default"
+2025-10-11T16:14:36.940+05:30  INFO 5608 --- [12_SB_Logging_App] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-10-11T16:14:36.941+05:30  INFO 5608 --- [12_SB_Logging_App] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-10-11T16:14:39.321+05:30  INFO 5608 --- [12_SB_Logging_App] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-11T16:14:39.356+05:30  INFO 5608 --- [12_SB_Logging_App] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-11T16:14:39.357+05:30  INFO 5608 --- [12_SB_Logging_App] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-11T16:14:39.436+05:30  INFO 5608 --- [12_SB_Logging_App] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-11T16:14:39.436+05:30  INFO 5608 --- [12_SB_Logging_App] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2494 ms
+2025-10-11T16:14:40.117+05:30  INFO 5608 --- [12_SB_Logging_App] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-11T16:14:40.190+05:30  INFO 5608 --- [12_SB_Logging_App] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-11T16:14:40.207+05:30  INFO 5608 --- [12_SB_Logging_App] [restartedMain] in.mane.Application                      : Started Application in 4.659 seconds (process running for 6.298)
+2025-10-11T16:14:49.999+05:30  INFO 5608 --- [12_SB_Logging_App] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-11T16:14:49.999+05:30  INFO 5608 --- [12_SB_Logging_App] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-11T16:14:49.999+05:30  INFO 5608 --- [12_SB_Logging_App] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-10-11T16:14:50.142+05:30  WARN 5608 --- [12_SB_Logging_App] [http-nio-8080-exec-1] in.mane.rest.MessageController           : *warn* THis is warning from welcome method
+2025-10-11T16:14:50.157+05:30  INFO 5608 --- [12_SB_Logging_App] [http-nio-8080-exec-1] in.mane.rest.MessageController           : *info* welcomeMsg() execution started
+2025-10-11T16:14:50.162+05:30 ERROR 5608 --- [12_SB_Logging_App] [http-nio-8080-exec-1] in.mane.rest.MessageController           : Error Occurred/ by zero
+2025-10-11T16:14:50.162+05:30  INFO 5608 --- [12_SB_Logging_App] [http-nio-8080-exec-1] in.mane.rest.MessageController           : *info* welcomeMsg() execution Ended
+2025-10-11T16:26:35.576+05:30  INFO 5608 --- [12_SB_Logging_App] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2025-10-11T16:26:35.582+05:30  INFO 5608 --- [12_SB_Logging_App] [Thread-5] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-11T16:26:35.604+05:30  INFO 5608 --- [12_SB_Logging_App] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
