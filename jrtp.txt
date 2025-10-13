@@ -1,3 +1,5 @@
+JRTP-NOTES
+============
 	
 =========================================
 Software Development Life Cycle (SDLC)
@@ -217,10 +219,12 @@ Which Ticketing Tool you are using in your project ?
 -> To send software installations requests to IT team we will create tickets using Ticketing Tool.
 
 
-
-
-
 =================================================================================================================
+
+===============
+GIT / HITHUB
+===============
+
 
 To commit only the modified files (and not the newly created/untracked files) to your Git repository, you can do the following:
 
