@@ -389,14 +389,109 @@ To change the log level
 	hence from here all levels get printed
 
 -> When we set one log level, application will print log messages from that level to all higher level messages.
+-------------------------------------------------------------------------
 
+==================
+Log Monitoring
+===================
 
+-> It is the process of checking logs of application to understand problems occurring in the application
+we have several tools to perform log monitoring
 
+1) Putty
+2) WinSCP
+3) ELK
+4) Splunk
 
+============
+Putty
+=============
 
+-> Putty is a CLI based Software
+-> Used to connect from windows to Linux machine.
+-> To connect to Linux machine we need machine details
+	IP : 192.168.1.2
+	username : loguser
+	password : log@123
 
+Putty commands 
+---------------
 
+cat filename  :  To get file data from top to bottom
 
+head filename : To get first 10 lines of file
 
+tail filename : To get last 10 lines of file 
 
+grep 'Exception' filename : It will print the lines which contains Exception 
 
+=======
+WinScp 
+=======
+
+-> GUI based software
+-> Used to connect from windows to Linux machines 
+-> Using this WinSCP we can upload and download files from windows to Linux and vice versa
+
+==========
+Splunk
+==========
+-> GUI Based paid software 
+
+======
+ELK
+======
+
+E : Elastic Search
+L : Log Stash
+K : Kibana
+
+The above 3 open source products are used for log monitoring
+
+==================================================================
+
+===============
+Mini Project 
+===============
+
+Step-1) Will provide requirement
+Step-2) Need to understand the requirement and come up with the questions (Query log)
+Step-3) I will give clarifications for the questions
+Step-4) DB Analysis (Tables, Columns)
+Step-5) Java Components Analysis (Interfaces, Classes, Methods)
+Step-6) I will explain my analysis
+Step-7) Compare your analysis and my analysis
+Step-8) will explain coding in live class
+
+--------------
+Mini Project-1  => Reports Application
+--------------
+
+Application Name : Insurance Report Generation
+
+Plan Name : Cash / Food / Medical / Employment
+Plan Status : Approved / Denied / Terminated
+Gender : Male / Female
+From Date :
+To Date : 
+
+Note : Insert 20 records in DB table manually with given permutations and combinations
+
+-> 1) It is a dynamic search functionality. Based on search criteria we need to fetch records from Database and display in UI
+2) When user click on 'Search' Without selecting any filter then we need to fetch all records from table and display in UI.
+3) When user click on 'Excel' then complete Database table data should be exported to excel file and send that excel file as an attachment to your email id.
+4) When user click on 'PDF' then complete Database table data should be exported to PDF file and send that PDF file as an attachment to your email id.
+
+DB Table : CITIZEN_PLANS_INFO
+---------------------------------
+CITIZEN_ID 		NUMBER PRIMARY KEY
+CITIZEN_NAME 		VARCHAR
+GENDER	 		VARCHAR
+PLAN_NAME 		VARCHAR
+PLAN_STATUS 		VARCHAR
+CITIZEN_START_DATE 	DATE
+CITIZEN_END_DATE 	DATE
+BENEFIT_AMOUNT		NUMBER
+DENIAL_REASON		VARCHAR
+TERMINATION_REASON	VARCHAR
+TERMINATION_DATE	DATE	
