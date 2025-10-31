@@ -208,7 +208,7 @@ URL to Downloading : https://start.atlassian.com/
 10) How to create Sprint ?
 11) Task Assignment in JIRA 
 12) Task Status Change in JIRA
-13) How Create Bug in JIRA ?
+13) How to Create Bug in JIRA ?
 
 =====================================================
 Which Ticketing Tool you are using in your project ?
@@ -230,7 +230,6 @@ To commit only the modified files (and not the newly created/untracked files) to
 
 git status
 
-
 You can add modified files individually using:
 git add <modified-file1> <modified-file2>
 
@@ -244,6 +243,7 @@ git commit -m "Commit message for modified files only"
 
 💡 Summary:
 If you want to commit only modified (not new) files:
+
 git add -u
 git commit -m "Modified files only"
 
@@ -266,7 +266,8 @@ We can merge changes from one branch to another branch using pull request
 
 $ git clone <url>  ==> will clone default branch
 
-To clone project directly to the develop branch not from main branch while develop branch is created from main branch
+To clone project directly to the develop branch not from main branch 
+while develop branch is created from main branch
 
 git clone -b develop http://github.com/maneit/my_project.git
 
@@ -282,8 +283,8 @@ $git stash apply
 2) git push vs git pull
 3) git stash & git stash apply
 4) git fetch vs git pull
-	-> pull download the remote repo changes to the working directory 		directly
-	-> fetch will first check that is there any changes in the remote 		repo if yes and then download these to the local repository 		but not the working directory. to get these changes to the 		working directory then should pull again
+	-> pull download the remote repo changes to the working directory directly
+	-> fetch will first check that are there any changes in the remote repo if yes and then download these to the local repository but not the working directory, to get these changes to the working directory then should pull again
 
 5) git merge vs git rebase
 
@@ -297,7 +298,7 @@ Git merge :
 		2) git merge
 		3) git rebase 
 
-------------------------------------------------------
+------------------------------------------------------------------------------
 
 fatal: detected dubious ownership in repository at 'D:/My_Project_Work/temple_project'
 'D:/My_Project_Work/temple_project' is owned by:
@@ -364,9 +365,9 @@ Logging level hierarchy
 
 Trace >> debug >> info >> warn >> error >> fatal
 
-In spring boot by Default it will use level ass INFO
+In spring boot by Default it will use level as INFO
 In spring boot by Default it will use ConsoleAppender
-To generate log messages in log file we have set below property in 
+To generate log messages in log file we have to set below property in 
 application.properties file
 
  logging.file.name = app.log
@@ -477,6 +478,8 @@ To Date :
 
 Note : Insert 20 records in DB table manually with given permutations and combinations
 
+-> Plan name dropdown values should come from database table
+-> plan status drop down values should come from database 
 -> 1) It is a dynamic search functionality. Based on search criteria we need to fetch records from Database and display in UI
 2) When user click on 'Search' Without selecting any filter then we need to fetch all records from table and display in UI.
 3) When user click on 'Excel' then complete Database table data should be exported to excel file and send that excel file as an attachment to your email id.
@@ -494,4 +497,50 @@ CITIZEN_END_DATE 	DATE
 BENEFIT_AMOUNT		NUMBER
 DENIAL_REASON		VARCHAR
 TERMINATION_REASON	VARCHAR
-TERMINATION_DATE	DATE	
+TERMINATION_DATE	DATE
+
+--------------------
+Java Components
+--------------------
+
+Persistence Layer :
+	1) CitizenPlan.java (Entity Class)         
+	2) CitizenPlanRepository.java (Interface)
+
+Service Layer :
+	3) ReportService.java (interface) -> Service always created as an interface
+		1) method to get plan-name drop down data
+		2) method to get plan-status drop down data
+		3) method to handle search functionality
+		4) method to export data to excel file
+		5) method to export data to pdf file
+	4) ReportServiceImpl.java (Class)
+	5) PdfGenerator.java (class)
+	6) ExcelGenerator.java (class)
+	7) EmailUtils.java (class)
+
+Controller Layer :
+	8) ReportController.java (class)
+	9) SearchRequest.java (class) (Form binding class/ command/ DTO)
+	10) DataLoader.java (runner class)
+
+Presentation Layer:
+	11) index.jsp
+
+
+=================
+Project Setup
+=================
+
+	1) Create starter project with required dependencies
+	2) Configure data source & view resolver in .properties file
+	3) Create entity class and repository interface 
+	4) Create runner to load data into Db table
+	5) Create form binding class
+	6) Create service Interface with abstract methods
+	7) Create serviceImpl class 
+	8) Create Controller class 
+	9) Create view page and & add bootstrap css & js 
+	10) Run the application and access the welcome page
+	11) Create a git repo and Push project into Git repo
+
