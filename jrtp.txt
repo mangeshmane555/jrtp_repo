@@ -95,11 +95,9 @@ Story : A task
 
 Story Points : Represents duration to complete a story
 
-				3 points  - 1 day
-
-				5 Points  - 2 days
-
-				8 Points  - 3 days
+		3 points  - 1 day
+		5 Points  - 2 days
+		8 Points  - 3 days
 
 Sprint Planning Meeting: To identify priority stories to complete
 
@@ -225,7 +223,6 @@ Which Ticketing Tool you are using in your project ?
 GIT / HITHUB
 ===============
 
-
 To commit only the modified files (and not the newly created/untracked files) to your Git repository, you can do the following:
 
 git status
@@ -238,8 +235,6 @@ git add -u (or ) git add --update
 
 Commit the changes:
 git commit -m "Commit message for modified files only"
-
-
 
 💡 Summary:
 If you want to commit only modified (not new) files:
@@ -346,8 +341,7 @@ Log Monitoring tools
 3) ELK
 4) Splunk (Licensed)
 
-
-Logging Architecture 
+Logging Architecture
 ----------------------
 
 1) Logger : This class providing method to generate log messages 
@@ -383,8 +377,6 @@ Rolling Appenders
 To customize springboot application log configuration by creating 
 logback.xml file under src/main/resources folder
 
-
-
 To change the log level 
 	-> logging.level.root = DEBUG
 	hence from here all levels get printed
@@ -406,7 +398,7 @@ we have several tools to perform log monitoring
 
 ============
 Putty
-=============
+============
 
 -> Putty is a CLI based Software
 -> Used to connect from windows to Linux machine.
@@ -419,11 +411,8 @@ Putty commands
 ---------------
 
 cat filename  :  To get file data from top to bottom
-
 head filename : To get first 10 lines of file
-
 tail filename : To get last 10 lines of file 
-
 grep 'Exception' filename : It will print the lines which contains Exception 
 
 =======
