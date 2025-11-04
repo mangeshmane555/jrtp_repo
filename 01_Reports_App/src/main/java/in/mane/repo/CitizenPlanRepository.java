@@ -9,11 +9,11 @@ import in.mane.entity.CitizenPlan;
 
 public interface CitizenPlanRepository extends JpaRepository<CitizenPlan, Integer> {
 
-//	@Query("select distinct(planName) from citizenPlan")
-//	public List<String> getPlanNames();
-//	
-//	@Query("select distinct(planStatus) from citizenPlan")
-//	public List<String> getPlanStatuses();
+	@Query("select distinct(planName) from citizenPlan")
+	public List<String> getPlanNames();
+	
+	@Query("select distinct(planStatus) from citizenPlan")
+	public List<String> getPlanStatuse();
 	
 	
 	
