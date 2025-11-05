@@ -12,6 +12,7 @@ import in.mane.request.SearchRequest;
 @Service
 public class ReportServiceImpl implements ReportService {
 
+	// Inject repository to service class
 	@Autowired
 	private CitizenPlanRepository planRepo;
 	

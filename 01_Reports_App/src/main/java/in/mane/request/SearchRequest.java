@@ -4,7 +4,7 @@ package in.mane.request;
 public class SearchRequest {
 
 	private String planName;	
-	private String planStatuses;	
+	private String planStatus;	
 	private String gender;
 	private String startDate;	
 	private String endDate;
@@ -15,11 +15,11 @@ public class SearchRequest {
 	public void setPlanName(String planName) {
 		this.planName = planName;
 	}
-	public String getPlanStatuses() {
-		return planStatuses;
+	public String getPlanStatus() {
+		return planStatus;
 	}
-	public void setPlanStatuses(String planStatuses) {
-		this.planStatuses = planStatuses;
+	public void setPlanStatus(String planStatus) {
+		this.planStatus = planStatus;
 	}
 	public String getGender() {
 		return gender;
