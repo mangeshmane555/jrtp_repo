@@ -1,5 +1,7 @@
 package in.mane.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,13 +17,20 @@ public class ReportController {
 	// Inject service to controller
 	@Autowired
 	private ReportService service;
-	
+
+	// To load the form initially
 	@GetMapping("/")
 	public String indexPage(Model model) {
-		
+
 		SearchRequest searchObj = new SearchRequest();
 		model.addAttribute("search", searchObj);
-		
+
+		List<String> planNames = service.getPlanNames();
+		model.addAttribute("plan_names", planNames);
+
+		List<String> planStatuses = service.getPlanStatuses();
+		model.addAttribute("plan_statuses", planStatuses);
+
 		return "index";
 	}
 }
